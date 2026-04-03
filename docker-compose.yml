@@ -9,11 +9,10 @@ services:
     volumes:
       - /bin/ffmpeg:/bin/ffmpeg:ro
       - /bin/ffprobe:/bin/ffprobe:ro
-    networks:
-      - proxy
     environment:
-      - FFMPEG_BIN=/bin/ffmpeg
-      - FFPROBE_BIN=/bin/ffprobe
+      - FFMPEG_BIN=/usr/lib/jellyfin-ffmpeg/ffmpeg
+      - FFPROBE_BIN=/usr/lib/jellyfin-ffmpeg/ffprobe
       # Uncomment and set value as needed
       #- APP_PATH=""
-      #- NO_CORS=0 
+      - NO_CORS=1 
+    restart: unless-stopped

@@ -58,10 +58,10 @@ EXPOSE 11470
 EXPOSE 12470
 
 # full path to the ffmpeg binary
-ENV FFMPEG_BIN=
+ENV FFMPEG_BIN=/usr/lib/jellyfin-ffmpeg/ffmpeg
 
 # full path to the ffprobe binary
-ENV FFPROBE_BIN=
+ENV FFPROBE_BIN=/usr/lib/jellyfin-ffmpeg/ffprobe
 
 # Custom application path for storing server settings, certificates, etc
 ENV APP_PATH=
